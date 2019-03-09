@@ -24,6 +24,7 @@ public class CrudController {
 	
 	@RequestMapping(value="/{smallUrl}", method=RequestMethod.GET)
 	public RedirectView hello(@PathVariable String smallUrl){
+		System.out.println(":::: Application Starts ::::");
 		System.out.println("url"+smallUrl);
 		String bigUrl=urlService.getBigUrl(smallUrl);
 		
